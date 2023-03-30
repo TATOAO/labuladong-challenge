@@ -1,5 +1,6 @@
 # Definition for singly-linked list.
 # 2023-03-02
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -82,7 +83,6 @@ while longer_start != None and shorter_start != None:
 
 # return joint_node
 print(joint_node)
-
 
 
 

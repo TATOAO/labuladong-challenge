@@ -19,6 +19,4 @@ pd.Categorical(df['J'], ['clan', 'blan'])
 pd.read_csv()
 
 
-df.loc[:,'B'] = 232
-
-df
+df.loc[:,'B'] = 
