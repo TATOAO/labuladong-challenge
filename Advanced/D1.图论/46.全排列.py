@@ -1,5 +1,12 @@
 from typing import List
 
+
+"""
+一点点想法, 如果我们要用generator, 一次只输出一个排列, 不可能需要在一开始把全部
+的排列计算完,然后再generate
+
+"""
+
 def permute(nums: List[int]) -> List[List[int]]:
 
     if len(nums) == 1:
