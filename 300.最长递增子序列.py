@@ -3,40 +3,15 @@ from typing import List
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
 
-        if len(nums) == 0:
-            return 0
 
-        total_min = nums[0]
-        # records = [{'max': nums[0], 'len': 1}]
-        records = [(nums[0], 1)]
-
-        for j in nums[1:]:
-            current_records_cnt = len(records)
-            for i in range(current_records_cnt):
-                record = records[i]
-                if j < total_min:
-                    if (j,1) not in records:
-                        # records.append({'max': j, 'len': 1}) 
-                        records.append((j,1))
-
-                    total_min = j
-
-                if j == (record[0] + 1):
-                    # record['max'] = j
-                    # record['len'] += 1
-
-                    record = (j, record[1] + 1)
-
-                # elif j > record['max']:
-                elif j > record[0]:
-                    new_count = record[1] + 1
-                    if (j, new_count) not in records:
-                        records.append((j,new_count))
-                        # records.append({'max': j, 'len': record['len'] + 1}) 
+        self.path = []
 
 
-            import ipdb;ipdb.set_trace()
-        return max([record[1] for record in records])
+
+
+
+
+
 
 if __name__ == "__main__":
     s = Solution()
